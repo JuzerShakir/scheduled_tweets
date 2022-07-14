@@ -84,6 +84,7 @@ GEM
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    hirb (0.7.3)
     i18n (1.11.0)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.5)
@@ -212,6 +213,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  hirb
   jbuilder (~> 2.7)
   listen (~> 3.3)
   puma (~> 5.0)
