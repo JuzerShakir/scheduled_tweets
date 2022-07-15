@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   get '/log_in', to: "session#new"
   post '/log_in', to: "session#create"
   delete '/logout', to: "session#destroy"
+
+  get '/password', to: "passwords#edit", as: :edit_password
+  patch '/password', to: "passwords#update", as: :update_password
 end
