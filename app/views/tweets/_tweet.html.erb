@@ -9,6 +9,6 @@
     <% else %>
         Scheduled for <%= l tweet.publish_at, format: :short %>
     <% end %>
-
+    <%= link_to "Edit Tweet", edit_tweet_path(tweet) %>
     </div>
 </div>

@@ -1,5 +1,6 @@
 class TweetsController < ApplicationController
     before_action :require_user_to_be_logged_in!
+    before_action :set_tweet, only: [:edit, :update, :destroy]
 
     def index
         @tweets = Current.user.tweets
@@ -10,7 +11,7 @@ class TweetsController < ApplicationController
     end
 
     def create
-        @tweet = Current.user.tweets.new(tweets_param)
+        @tweet = Current.user.tweets.new(tweet_params)
         if @tweet.save
             redirect_to tweets_path, notice: "Tweets was scheduled successfully"
         else
@@ -18,9 +19,29 @@ class TweetsController < ApplicationController
         end
     end
 
+    def edit
+    end
+
+    def update
+        if @tweet.update(tweet_params)
+            redirect_to tweets_path, notice: "Tweet Updated"
+        else
+            render :edit
+        end
+    end
+
+    def destroy
+        @tweet.destroy
+        redirect_to tweets_path, notice: "Tweet unscheduled"
+    end
+
     private
 
-    def tweets_param
+    def tweet_params
         params.require(:tweet).permit(:twitter_account_id, :body, :publish_at)
+    end
+
+    def set_tweet
+        @tweet = Current.user.tweets.find(params[:id])
     end
 end
