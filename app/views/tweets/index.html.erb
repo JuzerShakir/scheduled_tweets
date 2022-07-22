@@ -6,4 +6,7 @@
     <% else %>
         <%= link_to "Connect to Twitter", 'auth/twitter', method: :post, class: "btn btn-primary" %>
     <% end %>
+
 </div>
+
+<%= render @tweets %>
