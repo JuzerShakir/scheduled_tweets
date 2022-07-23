@@ -3,7 +3,7 @@
 _Tagline_
 
 <div align="center">
-  <img src="public/assets/project_logo.png" />
+  <img src="public/project_logo.png" />
 </div>
 
 ![](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=juzershakir.scheduled_tweets&color=000000&lcolor=000000&style=for-the-badge&logo=Github)
