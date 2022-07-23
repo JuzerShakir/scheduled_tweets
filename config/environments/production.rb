@@ -118,4 +118,5 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   config.active_job.queue_adapter = :sidekiq
+  config.action_mailer.default_url_options = { host: "https://schedule-tweets-hub.herokuapp.com/" }
 end
