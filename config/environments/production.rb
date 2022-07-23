@@ -3,6 +3,18 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.active_job.queue_adapter = :sidekiq
+  config.action_mailer.default_url_options = { host: "schedule-tweets-hub.herokuapp.com" }
+
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: Rails.application.credentials.dig(:mail, :email),
+    password: Rails.application.credentials.dig(:mail, :password)
+  }
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -46,7 +58,7 @@ Rails.application.configure do
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
+  config.force_ssl = true
 
   # Include generic and useful information about system operation, but avoid logging too much
   # information to avoid inadvertent exposure of personally identifiable information (PII).
@@ -117,6 +129,4 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
-  config.active_job.queue_adapter = :sidekiq
-  config.action_mailer.default_url_options = { host: "https://schedule-tweets-hub.herokuapp.com/" }
 end
