@@ -8,20 +8,20 @@ _Tagline_
 
 ![](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=juzershakir.scheduled_tweets&color=000000&lcolor=000000&style=for-the-badge&logo=Github)
 
-<a href="https://wakatime.com/badge/github/JuzerShakir/scheduled_tweets"><img src="https://wakatime.com/badge/github/JuzerShakir/sceduled_tweets.svg" alt="wakatime"></a>
+<a href="https://wakatime.com/badge/user/ccef187f-4308-4666-920d-d0a9a07d713a/project/797d96e7-919f-4407-823e-a9abb0f760b7"><img src="https://wakatime.com/badge/user/ccef187f-4308-4666-920d-d0a9a07d713a/project/797d96e7-919f-4407-823e-a9abb0f760b7.svg" alt="wakatime"></a>
 
 ## ❗ Objectives
 
 This web-app accomplishes the following:
 
 - [x] Able to Sign Up, Sign In and send an email to reset the password.
-- [ ] Able to connect with Multiple Twitter Accounts
-- [ ] Able to list all twitter accounts that the user has linked.
-- [ ] Able to schedule a tweet.
-- [ ] Enable backgrounds Job with Sidekiq & Redis to publish the tweet to the Twitter.
-- [ ] Show all the tweets that were created.
-- [ ] Able to edit and delete the tweets that are not yet published.
-- [ ] Able to see the tweet on twitter if the tweet has been published.
+- [x] Able to connect with Multiple Twitter Accounts
+- [x] Able to list all twitter accounts that the user has linked.
+- [x] Able to schedule a tweet.
+- [x] Enable backgrounds Job with Sidekiq & Redis to publish the tweet to the Twitter.
+- [x] Show all the tweets that were created.
+- [x] Able to edit and delete the tweets that are not yet published.
+- [x] Able to see the tweet on twitter if the tweet has been published.
 
 ---
 
