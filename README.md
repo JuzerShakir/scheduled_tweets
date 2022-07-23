@@ -1,24 +1,115 @@
-# README
+# Scheduled Tweets
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+_Tagline_
 
-Things you may want to cover:
+<div align="center">
+  <img src="public/assets/project_logo.png" />
+</div>
 
-* Ruby version
+![](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=juzershakir.scheduled_tweets&color=000000&lcolor=000000&style=for-the-badge&logo=Github)
 
-* System dependencies
+<a href="https://wakatime.com/badge/github/JuzerShakir/scheduled_tweets"><img src="https://wakatime.com/badge/github/JuzerShakir/sceduled_tweets.svg" alt="wakatime"></a>
 
-* Configuration
+## ❗ Objectives
 
-* Database creation
+This web-app accomplishes the following:
 
-* Database initialization
+- [x] Able to Sign Up, Sign In and send an email to reset the password.
+- [ ] Able to connect with Multiple Twitter Accounts
+- [ ] Able to list all twitter accounts that the user has linked.
+- [ ] Able to schedule a tweet.
+- [ ] Enable backgrounds Job with Sidekiq & Redis to publish the tweet to the Twitter.
+- [ ] Show all the tweets that were created.
+- [ ] Able to edit and delete the tweets that are not yet published.
+- [ ] Able to see the tweet on twitter if the tweet has been published.
 
-* How to run the test suite
+---
 
-* Services (job queues, cache servers, search engines, etc.)
+## 💎 Required Gems
 
-* Deployment instructions
+**This project was built on Ruby version _3.1.2_.**
 
-* ...
+Following gems were installed in these versions to execute the functionality:
+
+|  **Gem Names**   |              **Gem**               |  **Version**   |                          **Use**                          |
+| :--------------: | :--------------------------------: | :------------: | :-------------------------------------------------------: |
+|      Rails       |             _'rails'_              | \***\*\_\*\*** |         _Use for executing and rendering web-app_         |
+|    Postgresql    |               _'pg'_               | \***\*\_\*\*** |     _Use postgres as the database for Active Record_      |
+|      BCrypt      |             _'bcrypt'_             |   **3.1.16**   |   _Secure hash algorithm for safely storing passwords_    |
+| omniauth-twitter |        _'omniauth-twitter'_        |   **1.4.0**    |                       _Twitter API_                       |
+| CSRF Protection  | _'omniauth-rails_csrf_protection'_ |   **1.0.1**    |                _Omniauth CSRF Protection_                 |
+|     Twitter      |            _'twitter'_             |   **7.0.0**    |   _Authenticating web-app & user for publishing tweets_   |
+|     Sidekiq      |            _'sidekiq'_             |   **6.5.1**    | _Background Job to connect with Twitter to publish tweet_ |
+
+---
+
+## ⚙️ Setting up a PostgreSQL user
+
+If you don't have a user set on postgres, here's how to set new user:
+
+```bash
+sudo -u postgres createuser -s [username]
+```
+
+To set a password for this user, log in to the PostgreSQL command line client:
+
+```bash
+sudo -u postgres psql
+```
+
+Enter the following command to set the password:
+
+```bash
+\password your_password
+```
+
+Enter and confirm the password. Then exit the PostgreSQL client:
+
+```bash
+\q
+```
+
+---
+
+## 📋 Execution
+
+Run the following commands to execute locally:
+
+The following will install required version of ruby (make sure [rvm is installed](https://rvm.io/rvm/install).)
+
+```bash
+rvm install 3.1.2
+```
+
+```bash
+rvm use 3.1.2
+```
+
+```bash
+git clone git@github.com:JuzerShakir/scheduled_tweets.git
+```
+
+```bash
+cd scheduled_tweets
+```
+
+```bash
+gem install rails -v 6.1.6.1
+```
+
+```bash
+bundle install
+```
+
+```bash
+rails db:setup
+```
+
+```bash
+rails s
+```
+
+To see this web-app up and running without executing above commands locally,
+I have deployed it on [Heroku](https://__name__.herokuapp.com/).
+
+---
