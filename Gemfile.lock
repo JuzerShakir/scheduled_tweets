@@ -130,6 +130,14 @@ GEM
     msgpack (1.5.3)
     multipart-post (2.2.3)
     naught (1.1.0)
+    net-imap (0.2.3)
+      digest
+      net-protocol
+      strscan
+    net-pop (0.1.1)
+      digest
+      net-protocol
+      timeout
     net-protocol (0.1.2)
       io-wait
       timeout
@@ -231,6 +239,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    strscan (3.0.3)
     thor (1.2.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -287,6 +296,8 @@ DEPENDENCIES
   hirb
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  net-imap
+  net-pop
   net-smtp
   omniauth-rails_csrf_protection (~> 1.0)
   omniauth-twitter (~> 1.4)

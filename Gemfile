@@ -23,7 +23,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 # makes the output of a query from database prettier in rails console
 gem 'hirb'
-gem 'net-smtp'
+gem 'net-smtp', require: false
+gem 'net-imap', require: false
+gem 'net-pop', require: false
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
