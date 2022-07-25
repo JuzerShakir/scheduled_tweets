@@ -1,6 +1,6 @@
 # Scheduled Tweets
 
-_Tagline_
+_Wanna tweet something not now but later? Your search ends here!_
 
 <div align="center">
   <img src="public/project_logo.png" />
