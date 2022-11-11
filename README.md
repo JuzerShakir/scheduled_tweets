@@ -1,6 +1,6 @@
 # Scheduled Tweets
 
-_Wanna tweet something not now but later? Your search ends here!_
+_A tweet scheduler_
 
 <div align="center">
   <img src="public/project_logo.png" />
